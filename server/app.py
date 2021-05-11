@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, send_from_directory
 
-SCRIPT = "curl something here ig"
-
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html", addr=request.remote_addr, script=SCRIPT)
+    return render_template("index.html", addr=request.remote_addr)
 
 
 @app.route("/download")

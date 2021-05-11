@@ -111,10 +111,11 @@
     <div class="bottom fc">
         <div class="box">
             <div class="copy-outer">
-                <p class="code-block">{{ script }}</p>
+                <p class="code-block">curl https://myip.ogriffiths.com/download --output /usr/bin/</p>
                 <button class="code-copy">📋</button>
             </div>
-            <p class="tc code-bottom"><b>Paste the above into your terminal or <a href="">download</a> directly!</b></p>
+            <p class="tc code-bottom"><b>Paste the above into your terminal or <a href="{{ url_for('download') }}"
+                        target="_blank">download</a> directly!</b></p>
         </div>
     </div>
 </body>
