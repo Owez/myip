@@ -54,7 +54,7 @@
 
         .box {
             width: 65vw;
-            height: 12.5vh;
+            min-height: 6rem;
             background-color: #ffffff;
             border-radius: 1rem;
             margin-bottom: 15vh;
@@ -80,7 +80,6 @@
 
         .code-block {
             width: 100%;
-            overflow-x: auto;
             background-color: #323d51;
             padding: 1rem;
             margin: 0;
@@ -98,6 +97,10 @@
             border-radius: 0.5rem;
             font-size: 1.5rem;
         }
+
+        .code-bottom {
+            margin-bottom: 0rem;
+        }
     </style>
     <div class="top fc">
         <div>
@@ -111,7 +114,7 @@
                 <p class="code-block">{{ script }}</p>
                 <button class="code-copy">📋</button>
             </div>
-            <p class="tc"><b>Paste the above into your terminal or <a href="">download</a> directly!</b></p>
+            <p class="tc code-bottom"><b>Paste the above into your terminal or <a href="">download</a> directly!</b></p>
         </div>
     </div>
 </body>
