@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+    <title>myip</title>
+</head>
+
+<body>
+    <style>
+        body {
+            border: 0;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .fc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top {
+            background-color: #ffffff;
+            width: 100vw;
+            height: 20vh;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-family: "Alfa Slab One", serif;
+            margin: 0;
+        }
+
+        .subtitle {
+            margin: 0;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        .bottom {
+            width: 100vw;
+            height: 80vh;
+            background-color: #d6c9b3;
+        }
+
+        .box {
+            width: 65vw;
+            height: 12.5vh;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            margin-bottom: 15vh;
+            padding: 1rem;
+        }
+
+        .noa {
+            text-decoration: initial;
+        }
+
+        a {
+            color: initial;
+            text-decoration: underline;
+        }
+
+        .tc {
+            text-align: center;
+        }
+
+        .copy-outer {
+            display: flex;
+        }
+
+        .code-block {
+            width: 100%;
+            overflow-x: auto;
+            background-color: #323d51;
+            padding: 1rem;
+            margin: 0;
+            border-radius: 0.5rem;
+            color: white;
+            font-family: 'Ubuntu Mono', monospace;
+            font-size: 1.5rem;
+        }
+
+        .code-copy {
+            border: 0;
+            width: 5rem;
+            background-color: #323d51;
+            border-left: 0.25rem solid #ffffff;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+        }
+    </style>
+    <div class="top fc">
+        <div>
+            <h1 class="tc"><a href="{{ url_for('index') }}" class="noa">myip</a></h1>
+            <p class="tc subtitle">Created by <a href="https://ogriffiths.com">Owen Griffiths</a></p>
+        </div>
+    </div>
+    <div class="bottom fc">
+        <div class="box">
+            <div class="copy-outer">
+                <p class="code-block">{{ script }}</p>
+                <button class="code-copy">📋</button>
+            </div>
+            <p class="tc"><b>Paste the above into your terminal or <a href="">download</a> directly!</b></p>
+        </div>
+    </div>
+</body>
+
+</html>
